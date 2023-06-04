@@ -7,10 +7,11 @@ import os
 
 
 def return_diff_structures(warping_paths, output_path, plot_path,
-                           segmentdivider=25, diff_max=3, diff_min=0.13, area_diff=10,
+                           segment_divider=25, diff_max=3, diff_min=0.13, area_diff=10,
                            plotting=False, debug=True):
-    duplicate_pairs_list = []
-    diff_regions_list = []
+    diff_pairs_list = []
+    same_structure_list = []
+
     num_of_pairs = len(warping_paths)
 
     # Checking every combination if it has the same structure
@@ -29,50 +30,39 @@ def return_diff_structures(warping_paths, output_path, plot_path,
             print(f"Checking files {ref_name} vs. {target_name} for structure differences ({i}/{num_of_pairs})")
         pair_names = [ref_name, target_name]
 
-        is_same, diff_regions = is_structure_same(warping_path=warping_path, pair_names=pair_names,
+        is_same = is_structure_same(warping_path=warping_path, pair_names=pair_names,
                                                   output_path=output_path, plot_path=plot_path,
-                                                  segmentdivider=segmentdivider,
+                                                  segment_divider=segment_divider,
                                                   diff_max=diff_max, diff_min=diff_min, area_diff=area_diff,
                                                   plotting=plotting, debug=debug)
 
         if debug:
             print(f'The files {ref_name} and {target_name} contain the same music structure: {is_same}')
 
-        if diff_regions:
-            for i in diff_regions:
-                min_value_ref = min(diff_regions[i]['ref'])
-                max_value_ref = max(diff_regions[i]['ref'])
-                if debug:
-                    print(f'Diff regions of ref rec.: {min_value_ref} to {max_value_ref}s')
+        if is_same:
+            same_structure_list.append(target_name)
+        else:
+            diff_pairs_list.append(target_name)
 
-            for i in diff_regions:
-                min_value_target = min(diff_regions[i]['target'])
-                max_value_target = max(diff_regions[i]['target'])
-                if debug:
-                    print(f'Diff regions of target rec.: {min_value_target} to {max_value_target}s')
-
-        if not is_same:
-            duplicate_pairs_list.append(target_name)
-
-        diff_regions_list.append(diff_regions)
-    return duplicate_pairs_list, diff_regions_list
+    return diff_pairs_list, same_structure_list
 
 
 def is_structure_same(warping_path, pair_names, output_path, plot_path,
                       diff_max=3, diff_min=0.13, area_diff=10, plotting=False, debug=False,
-                      segmentdivider=25, feature_rate=50):
+                      segment_divider=25, feature_rate=50):
     warping_path = np.load(warping_path)
-    is_same, diff_regions = verify_path_slope(warping_path=warping_path, output_path=output_path, plot_path=plot_path,
-                                              segmentdivider=segmentdivider,
+    is_same = verify_path_slope(warping_path=warping_path, output_path=output_path, plot_path=plot_path,
+                                              segment_divider=segment_divider,
                                               pair_names=pair_names, diff_max=diff_max,
                                               area_diff=area_diff, diff_min=diff_min, feature_rate=feature_rate,
                                               plotting=plotting, debug=debug)
 
-    return is_same, diff_regions
+    return is_same
 
 
-def verify_path_slope(warping_path, output_path, plot_path, segmentdivider, pair_names,
-                      diff_max=3, area_diff=10, diff_min=0.13, feature_rate=50, plotting=True, debug=False):
+def verify_path_slope(warping_path, output_path, plot_path, segment_divider, pair_names,
+                      diff_max=3, area_diff=10, diff_min=0.13, feature_rate=50, plotting=True,
+                      debug=False):
     pathx = np.array(warping_path[0, :])
     pathy = np.array(warping_path[1, :])
 
@@ -81,13 +71,13 @@ def verify_path_slope(warping_path, output_path, plot_path, segmentdivider, pair
     pathxmaxval = max(pathx)
     pathxvalrange = pathxmaxval - pathxminval
 
-    # makes sure that the range is divisible by the segmentdivider value
-    modulo = pathxvalrange % segmentdivider
+    # makes sure that the range is divisible by the segment_divider value
+    modulo = pathxvalrange % segment_divider
     pathxvalrange = pathxvalrange - modulo
 
     refpoint1xval = int(
-        pathxminval + (pathxvalrange / segmentdivider))  # determination of point x value for approximation
-    refpoint2xval = int(pathxminval + (pathxvalrange / segmentdivider) * (segmentdivider - 1))
+        pathxminval + (pathxvalrange / segment_divider))  # determination of point x value for approximation
+    refpoint2xval = int(pathxminval + (pathxvalrange / segment_divider) * (segment_divider - 1))
     refpoint1xpos = int(
         np.argwhere(pathx == refpoint1xval)[0])  # finds out positions of array pathx at which these points are located
 
@@ -192,56 +182,6 @@ def verify_path_slope(warping_path, output_path, plot_path, segmentdivider, pair
         print(f'Result_max: {result_max}')
         print(f'Result_min: {result_min}')
 
-    # compute the areas of inaccurate synchronization
-    ref_x_points_table = [True]
-    diff_regions = {}
-    if wrong_x_points:
-        list_of_wrong_x = wrong_x_points[:-1]
-        list_of_wrong_x_shift = wrong_x_points[1:]
-        for wrong_x, wrong_x_shift in zip(list_of_wrong_x, list_of_wrong_x_shift):
-            current_diff = wrong_x_shift - wrong_x
-            if current_diff >= area_diff:
-                ref_x_points_table.append(False)
-            else:
-                ref_x_points_table.append(True)
-
-        if all(item for item in ref_x_points_table):
-            diff_regions[0] = {}
-            diff_regions[0]['ref'] = {}
-            diff_regions[0]['target'] = {}
-            diff_regions[0]['ref'] = [min(wrong_x_points), max(wrong_x_points)]
-            diff_regions[0]['target'] = [min(wrong_y_points), max(wrong_y_points)]
-
-        else:
-            num_of_operations = ref_x_points_table.count(False)
-            idx_of_operation = [index for (index, item) in enumerate(ref_x_points_table) if not item]
-            idx_of_operation.append(len(ref_x_points_table) - 1)
-
-            keys = range(num_of_operations + 1)
-            for i, idx in zip(keys, idx_of_operation):
-                diff_regions[i] = {}
-                diff_regions[i]['ref'] = {}
-                diff_regions[i]['target'] = {}
-                if i == 0:
-                    diff_regions[i]['ref'] = wrong_x_points[:idx]
-                    diff_regions[i]['target'] = wrong_y_points[:idx]
-                elif idx == (len(ref_x_points_table) - 1):
-                    prev_idx = idx_of_operation[i - 1]
-                    diff_regions[i]['ref'] = wrong_x_points[prev_idx:idx + 1]
-                    diff_regions[i]['target'] = wrong_y_points[prev_idx:idx + 1]
-                else:
-                    prev_idx = idx_of_operation[i - 1]
-                    diff_regions[i]['ref'] = wrong_x_points[prev_idx:idx]
-                    diff_regions[i]['target'] = wrong_x_points[prev_idx:idx]
-
-    # Evaluation, if two recordings have the same structure---------
-    # line_diff_max = abs(result_max - ref_slope)
-    # line_diff_min = abs(result_min)
-    # if line_diff_max > diff_max or line_diff_min <= diff_min:
-    #     is_same = False
-    # else:
-    #     is_same = True
-
     if plotting:
         if not os.path.exists(f'{output_path}/plots/{plot_path}'):
             os.makedirs(f'{output_path}/plots/{plot_path}')
@@ -254,8 +194,9 @@ def verify_path_slope(warping_path, output_path, plot_path, segmentdivider, pair
         # tikzplotlib.save("wp_example.tex")
         plt.savefig(f'{output_path}/plots/{plot_path}/{pair_names[0]}_vs_{pair_names[1]}_wp.pdf', bbox_inches='tight')
         # plt.show()
+        plt.close()
 
-    return is_same, diff_regions
+    return is_same
 
 
 # Helper functions ----------------------------------------------------------------------------------------------
@@ -266,16 +207,20 @@ def compute_slope(x1, y1, x2, y2):
 
 
 # function for creating the output files
-def create_output_file(diff_structure_list, path_to_output):
-    if os.path.exists(path_to_output):
-        os.remove(path_to_output)
-
-    df = pd.DataFrame(diff_structure_list)
-    writer = pd.ExcelWriter(path_to_output + '.xlsx')
-    df.to_excel(writer, sheet_name='structure_diff')
-    writer.save()
-
-    df.to_csv(path_to_output + '.csv')
+def create_output_file(diff_structure_list, path_to_output, output_filename, excel=True, csv=True):
+    df = pd.DataFrame(diff_structure_list, columns=['Orig_filename'])
+    df['Filename'] = df['Orig_filename'].astype(str).str[:3]
+    columns = ['Filename', 'Orig_filename']
+    if excel:
+        if not os.path.exists(f'{path_to_output}/xlsx/'):
+            os.makedirs(f'{path_to_output}/xlsx/')
+        writer = pd.ExcelWriter(f'{path_to_output}/xlsx/{output_filename}.xlsx')
+        df.to_excel(writer, sheet_name='structure_diff', index=False, columns=columns)
+        writer.save()
+    if csv:
+        if not os.path.exists(f'{path_to_output}/csv/'):
+            os.makedirs(f'{path_to_output}/csv/')
+        df.to_csv(f'{path_to_output}/csv/{output_filename}.csv', index=False, columns=columns)
 
 
 # function that returns nearest value to the input value from array

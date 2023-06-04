@@ -1,24 +1,24 @@
-Filename,Name,Origin,Year,Database,Pozn.,Source,label_CZ
-CD001,Takacs Quartet,Hungary/now Canada,2016,Stepan_FLAC,,CD,0
-CD002,Prague Quartet,CZ,1973,Stepan_FLAC,,CD,1
-CD003,Panocha Quartet,CZ,1983,Stepan_FLAC,,CD,1
-CD004,Janacek Quartet,CZ,1957,Stepan_FLAC,,CD,1
-CD008,Martinu Quartet,CZ,2012,Naxos,,https://www.naxosmusiclibrary.com/catalogue/item.asp?cid=UP0133-2,1
-CD009,Takacs Quartet,Hungary (/USA),1991,Naxos,,https://www.naxosmusiclibrary.com/catalogue/item.asp?cid=00028948311712,0
-CD010,Guarneri Quartet,USA,2009 (release),Naxos,,https://www.naxosmusiclibrary.com/catalogue/item.asp?cid=888880928801,0
-CD011,Vogler Quartet,Germany,2015 (release),Youtube,,https://www.youtube.com/watch?v=n-NmbEth8yo&list=OLAK5uy_kvxzjWdAb4aYbLJXsR_33MI2J8qKei9n0&ab_channel=VoglerQuartett%E2%80%93t%C3%A9maVoglerQuartett%E2%80%93t%C3%A9ma,0
-CD012,Emerson Quartet,USA,?,Youtube,,https://www.youtube.com/watch?v=5gaxtKQpGWI&ab_channel=Scene00,0
-CD013,Cleveland Quartet,USA,1991,Youtube,,https://www.youtube.com/watch?v=2OAWlfIsDhE&ab_channel=scrymgeour34,0
-CD014,Stamitz Quartet,CZ,2013 (release),Youtube,,https://www.youtube.com/watch?v=-oiqU-PeGHs&list=PLaVtQv-29gjkOt5c4zNWr3Z-kEETP0Ff-&index=52&ab_channel=PragueStamitzQuartet%E2%80%93t%C3%A9maPragueStamitzQuartet%E2%80%93t%C3%A9ma,1
-CD015,Moyzes Quartet,Slovakia,1990,Youtube,,https://www.youtube.com/watch?v=j9Kd28ydchA&list=OLAK5uy_lAtkH4NJHAwgT5kW1zDb__209dtrcjr_4&ab_channel=MoyzesQuartet-Topic,0
-CD016,Psophos Quartet,France,2006 (release),Youtube,,https://www.youtube.com/watch?v=iz0nH07WIoI&list=OLAK5uy_k2jM1Du0HCAE4_jsvTYaN_thhwe_1djW4&ab_channel=PsophosQuartet-Topic,0
-CD017,Melos Quartet,Germany (/International),2014 (release),Youtube,,https://www.youtube.com/watch?v=PhN1zHNjHrE&list=OLAK5uy_nw4zvSbvn6evHG9KNJClBpGsSDH4MHdHQ&ab_channel=MelosQuartet-Topic,0
-CD018,Delme Quartet,International (mby Britain),2014 (release),Youtube,,https://www.youtube.com/watch?v=RLixLvT45LU&list=OLAK5uy_kSlZ43wPOxhg8DYyeOQm_jnJ0ittVuv_U&ab_channel=DelmeStringQuartet-Topic,0
-CD019,Novak Quartet,CZ,?,Youtube,,https://www.youtube.com/watch?v=z2eva0-FCRs&ab_channel=SERIOSOSERIOSO,1
-CD020,Smetana Quartet,CZ,1975,Youtube,live,https://www.youtube.com/watch?v=EP9eSNQCgPw&ab_channel=SuperClassicChannel,1
-CD021,Fine Arts Quartet,USA,1998,Youtube,,https://www.youtube.com/watch?v=5guJJEjxYNI&ab_channel=ronaldjevans,0
-CD022,Prague Quartet,CZ,?,Youtube,,https://www.youtube.com/watch?v=HMtoO0CV_j8&ab_channel=%EA%B9%80%EC%A0%95%EC%88%98,1
-CD023,Van Dingstee Quartet,Netherlands,?,Youtube,,https://www.youtube.com/watch?v=IhxH2C0e_a0&ab_channel=vandingsteequartet,0
-CD024,Wihan Quartet,CZ,2010 (release),Youtube,,https://www.youtube.com/watch?v=V6ZfqeQitmI&list=OLAK5uy_muzo-hGu0Hx0SX3AZ6ddcoTlhIdikN2p8&index=5&ab_channel=WihanQuartet%E2%80%93t%C3%A9maWihanQuartet%E2%80%93t%C3%A9ma,1
-CD025,Carmina Quartet,Switzerland,2009 (release),Youtube,,https://www.youtube.com/watch?v=CTBuA0F-BNw&list=OLAK5uy_mPeLlv6kfKBhi5MGeM3RkuvTRG7YPGjs4&index=5&ab_channel=CarminaQuartet-Topic,0
-CD026,Smetana Quartet,CZ,1957 (release),Youtube,,https://www.youtube.com/watch?v=M2qd6x1MhjM&list=OLAK5uy_nSSK0liA7wiJxD9rTm8PkEKQfDkVFeEjQ&ab_channel=SmetanaQuartet-Topic,1
+Filename,Name,Origin,Year,Database,Pozn.,Source,Filename_No,label_CZ
+CD001,Takacs Quartet,Hungary/now Canada,2016,Stepan_FLAC,,CD,001,0
+CD002,Prague Quartet,CZ,1973,Stepan_FLAC,,CD,002,1
+CD003,Panocha Quartet,CZ,1983,Stepan_FLAC,,CD,003,1
+CD004,Janacek Quartet,CZ,1957,Stepan_FLAC,,CD,004,1
+CD008,Martinu Quartet,CZ,2012,Naxos,,https://www.naxosmusiclibrary.com/catalogue/item.asp?cid=UP0133-2,008,1
+CD009,Takacs Quartet,Hungary (/USA),1991,Naxos,,https://www.naxosmusiclibrary.com/catalogue/item.asp?cid=00028948311712,009,0
+CD010,Guarneri Quartet,USA,2009 (release),Naxos,,https://www.naxosmusiclibrary.com/catalogue/item.asp?cid=888880928801,010,0
+CD011,Vogler Quartet,Germany,2015 (release),Youtube,,https://www.youtube.com/watch?v=n-NmbEth8yo&list=OLAK5uy_kvxzjWdAb4aYbLJXsR_33MI2J8qKei9n0&ab_channel=VoglerQuartett%E2%80%93t%C3%A9maVoglerQuartett%E2%80%93t%C3%A9ma,011,0
+CD012,Emerson Quartet,USA,?,Youtube,,https://www.youtube.com/watch?v=5gaxtKQpGWI&ab_channel=Scene00,012,0
+CD013,Cleveland Quartet,USA,1991,Youtube,,https://www.youtube.com/watch?v=2OAWlfIsDhE&ab_channel=scrymgeour34,013,0
+CD014,Stamitz Quartet,CZ,2013 (release),Youtube,,https://www.youtube.com/watch?v=-oiqU-PeGHs&list=PLaVtQv-29gjkOt5c4zNWr3Z-kEETP0Ff-&index=52&ab_channel=PragueStamitzQuartet%E2%80%93t%C3%A9maPragueStamitzQuartet%E2%80%93t%C3%A9ma,014,1
+CD015,Moyzes Quartet,Slovakia,1990,Youtube,,https://www.youtube.com/watch?v=j9Kd28ydchA&list=OLAK5uy_lAtkH4NJHAwgT5kW1zDb__209dtrcjr_4&ab_channel=MoyzesQuartet-Topic,015,0
+CD016,Psophos Quartet,France,2006 (release),Youtube,,https://www.youtube.com/watch?v=iz0nH07WIoI&list=OLAK5uy_k2jM1Du0HCAE4_jsvTYaN_thhwe_1djW4&ab_channel=PsophosQuartet-Topic,016,0
+CD017,Melos Quartet,Germany (/International),2014 (release),Youtube,,https://www.youtube.com/watch?v=PhN1zHNjHrE&list=OLAK5uy_nw4zvSbvn6evHG9KNJClBpGsSDH4MHdHQ&ab_channel=MelosQuartet-Topic,017,0
+CD018,Delme Quartet,International (mby Britain),2014 (release),Youtube,,https://www.youtube.com/watch?v=RLixLvT45LU&list=OLAK5uy_kSlZ43wPOxhg8DYyeOQm_jnJ0ittVuv_U&ab_channel=DelmeStringQuartet-Topic,018,0
+CD019,Novak Quartet,CZ,?,Youtube,,https://www.youtube.com/watch?v=z2eva0-FCRs&ab_channel=SERIOSOSERIOSO,019,1
+CD020,Smetana Quartet,CZ,1975,Youtube,live,https://www.youtube.com/watch?v=EP9eSNQCgPw&ab_channel=SuperClassicChannel,020,1
+CD021,Fine Arts Quartet,USA,1998,Youtube,,https://www.youtube.com/watch?v=5guJJEjxYNI&ab_channel=ronaldjevans,021,0
+CD022,Prague Quartet,CZ,?,Youtube,,https://www.youtube.com/watch?v=HMtoO0CV_j8&ab_channel=%EA%B9%80%EC%A0%95%EC%88%98,022,1
+CD023,Van Dingstee Quartet,Netherlands,?,Youtube,,https://www.youtube.com/watch?v=IhxH2C0e_a0&ab_channel=vandingsteequartet,023,0
+CD024,Wihan Quartet,CZ,2010 (release),Youtube,,https://www.youtube.com/watch?v=V6ZfqeQitmI&list=OLAK5uy_muzo-hGu0Hx0SX3AZ6ddcoTlhIdikN2p8&index=5&ab_channel=WihanQuartet%E2%80%93t%C3%A9maWihanQuartet%E2%80%93t%C3%A9ma,024,1
+CD025,Carmina Quartet,Switzerland,2009 (release),Youtube,,https://www.youtube.com/watch?v=CTBuA0F-BNw&list=OLAK5uy_mPeLlv6kfKBhi5MGeM3RkuvTRG7YPGjs4&index=5&ab_channel=CarminaQuartet-Topic,025,0
+CD026,Smetana Quartet,CZ,1957 (release),Youtube,,https://www.youtube.com/watch?v=M2qd6x1MhjM&list=OLAK5uy_nSSK0liA7wiJxD9rTm8PkEKQfDkVFeEjQ&ab_channel=SmetanaQuartet-Topic,026,1
