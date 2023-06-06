@@ -1,27 +1,27 @@
-Filename,Name,Origin,Year,Database,Pozn.,Source,Filename_No,label_CZ
-CD001,Pavel Haas Quartet,CZ,,Stepan_FLAC,,CD,001,1
-CD002,Travnicek Quartet,CZ,1994 (Released),Stepan_FLAC,https://www.youtube.com/watch?v=RWhKYKIBiM0&list=OLAK5uy_nDK-hZfOOBMW8GsPIYu9hXXjZM9d0Qapg&index=5&ab_channel=Tr%C3%A1vn%C3%AD%C4%8DekQuartet%E2%80%93t%C3%A9maTr%C3%A1vn%C3%AD%C4%8DekQuartet%E2%80%93t%C3%A9ma,CD,002,1
-CD003,Prazak Quartet,CZ,1999,Stepan_FLAC,,CD,003,1
-CD004,Dante Quartet,UK,2010,Stepan_FLAC,,CD,004,0
-CD005,Skampa Quartet,CZ,2003 (release),CD_MUNI,,CD 448,005,1
-CD006,Moyzes Quartet (Takako Nishizaki),Slovakia,1990,Naxos,,https://www.naxosmusiclibrary.com/catalogue/item.asp?cid=8.550379,006,0
-CD007,Panocha Quartet,CZ,?,Naxos,live,https://www.naxosmusiclibrary.com/catalogue/item.asp?cid=291030,007,1
-CD008,Energie Nove Quartet,Switzerland,2018,Naxos,,https://www.naxosmusiclibrary.com/catalogue/item.asp?cid=CDS7817,008,0
-CD009,Lindsay Quartet,Britain,1991,Naxos,,https://www.naxosmusiclibrary.com/catalogue/item.asp?cid=00743625077728,009,0
-CD010,Talich Quartet,CZ,1984,Naxos,,https://www.naxosmusiclibrary.com/catalogue/item.asp?cid=LDV267,010,1
-CD011,Talich Quartet,CZ,2003,Naxos,,https://www.naxosmusiclibrary.com/catalogue/item.asp?cid=LDV255D,011,1
-CD012,Smetana Quartet,CZ,2009 (release),Naxos,,https://www.naxosmusiclibrary.com/catalogue/item.asp?cid=SU4003-2,012,1
-CD013,Wihan Quartet,CZ,2006,Naxos,,https://www.naxosmusiclibrary.com/catalogue/item.asp?cid=UP0086-2,013,1
-CD014,Panocha Quartet,CZ,1992 (release),Naxos,,https://www.naxosmusiclibrary.com/catalogue/item.asp?cid=SU3450-2,014,1
-CD015,Medici Quartet,Britain,1994,Naxos,,https://www.naxosmusiclibrary.com/catalogue/item.asp?cid=NI5389,015,0
-CD016,Smetana Quartet,CZ,1986,Youtube,,https://www.youtube.com/watch?v=UtKUJQraHeU&ab_channel=FabioLucianoVargas,016,1
-CD017,Stamitz Quartet,CZ,?,Youtube,,https://www.youtube.com/watch?v=AVOr71YBEJ4&t=0s&ab_channel=atsusiuenoatsusiueno,017,1
-CD018,Pavel Haas Quartet,CZ,2020,Youtube,,https://www.youtube.com/watch?v=fQhC0EfLFBo&ab_channel=Svatov%C3%A1clavsk%C3%BDhudebn%C3%ADfestivalOstrava,018,1
-CD019,Apollon Quartet,CZ,2001 (release),Youtube,,https://www.youtube.com/watch?v=psovSgMK0qg&ab_channel=ApollonQuartet-Topic,019,1
-CD021,Skampa Quartet,CZ,1995 (release),Youtube,,https://www.youtube.com/watch?v=qPsJ26cX4eU&list=OLAK5uy_mprWiFryV7yIErO42PNBYk3dRu2fqA-Ng&index=5&ab_channel=SkampaQuartet%E2%80%93t%C3%A9maSkampaQuartet%E2%80%93t%C3%A9ma,021,1
-CD022,Talich Quartet,CZ,2014 (release),Youtube,,https://www.youtube.com/watch?v=boMoTDi7irA&list=OLAK5uy_kEbZbZqU9kDvsKSKqUXeAOWphIycby4T8&ab_channel=TalichQuartet-Topic,022,1
-CD023,Smetana Quartet,CZ,1950 (release),Youtube,,https://www.youtube.com/watch?v=iRPtZZaUmqE&list=OLAK5uy_ndUyDrpJy9h1JX8fHi4PFv0i3s1ELzfVk&index=5&ab_channel=SmetanaQuartet%E2%80%93t%C3%A9maSmetanaQuartet%E2%80%93t%C3%A9ma,023,1
-CD024,Prazak Quartet,CZ,1991 (release),Youtube,,https://www.youtube.com/watch?v=eoruAU7yn3Q&ab_channel=Pra%C5%BE%C3%A1kQuartet-Topic,024,1
-CD025,Wihan Quartet,CZ,2019 (release),Youtube,,https://www.youtube.com/watch?v=ZGg1hOlvuoE&ab_channel=WihanQuartet-Topic,025,1
-CD026,Czech Quartet,CZ,1929,Youtube,,https://www.youtube.com/watch?v=vQ1VLgAR9Ao&list=OLAK5uy_lkAYFTBt-6tCKWOEld0GT1TJT1d0H7K8c&index=5&ab_channel=CzechQuartet%E2%80%93t%C3%A9maCzechQuartet%E2%80%93t%C3%A9ma,026,1
-CD027,Skampa Quartet,CZ,2007 (release),Youtube,,https://www.youtube.com/watch?v=Gf_C6LDuJ5E&list=OLAK5uy_lWufi_-9GlGG-JAlEQlZFHLOViqPJ1KRs&index=5&ab_channel=SkampaQuartet-Topic,027,1
+Filename,Name,Origin,Year,Database,Pozn.,Source,Filename_No,label_CZ,label_random
+CD001,Pavel Haas Quartet,CZ,,Stepan_FLAC,,CD,001,1,1
+CD002,Travnicek Quartet,CZ,1994 (Released),Stepan_FLAC,https://www.youtube.com/watch?v=RWhKYKIBiM0&list=OLAK5uy_nDK-hZfOOBMW8GsPIYu9hXXjZM9d0Qapg&index=5&ab_channel=Tr%C3%A1vn%C3%AD%C4%8DekQuartet%E2%80%93t%C3%A9maTr%C3%A1vn%C3%AD%C4%8DekQuartet%E2%80%93t%C3%A9ma,CD,002,1,1
+CD003,Prazak Quartet,CZ,1999,Stepan_FLAC,,CD,003,1,1
+CD004,Dante Quartet,UK,2010,Stepan_FLAC,,CD,004,0,1
+CD005,Skampa Quartet,CZ,2003 (release),CD_MUNI,,CD 448,005,1,1
+CD006,Moyzes Quartet (Takako Nishizaki),Slovakia,1990,Naxos,,https://www.naxosmusiclibrary.com/catalogue/item.asp?cid=8.550379,006,0,1
+CD007,Panocha Quartet,CZ,?,Naxos,live,https://www.naxosmusiclibrary.com/catalogue/item.asp?cid=291030,007,1,1
+CD008,Energie Nove Quartet,Switzerland,2018,Naxos,,https://www.naxosmusiclibrary.com/catalogue/item.asp?cid=CDS7817,008,0,1
+CD009,Lindsay Quartet,Britain,1991,Naxos,,https://www.naxosmusiclibrary.com/catalogue/item.asp?cid=00743625077728,009,0,1
+CD010,Talich Quartet,CZ,1984,Naxos,,https://www.naxosmusiclibrary.com/catalogue/item.asp?cid=LDV267,010,1,1
+CD011,Talich Quartet,CZ,2003,Naxos,,https://www.naxosmusiclibrary.com/catalogue/item.asp?cid=LDV255D,011,1,1
+CD012,Smetana Quartet,CZ,2009 (release),Naxos,,https://www.naxosmusiclibrary.com/catalogue/item.asp?cid=SU4003-2,012,1,1
+CD013,Wihan Quartet,CZ,2006,Naxos,,https://www.naxosmusiclibrary.com/catalogue/item.asp?cid=UP0086-2,013,1,1
+CD014,Panocha Quartet,CZ,1992 (release),Naxos,,https://www.naxosmusiclibrary.com/catalogue/item.asp?cid=SU3450-2,014,1,0
+CD015,Medici Quartet,Britain,1994,Naxos,,https://www.naxosmusiclibrary.com/catalogue/item.asp?cid=NI5389,015,0,0
+CD016,Smetana Quartet,CZ,1986,Youtube,,https://www.youtube.com/watch?v=UtKUJQraHeU&ab_channel=FabioLucianoVargas,016,1,0
+CD017,Stamitz Quartet,CZ,?,Youtube,,https://www.youtube.com/watch?v=AVOr71YBEJ4&t=0s&ab_channel=atsusiuenoatsusiueno,017,1,0
+CD018,Pavel Haas Quartet,CZ,2020,Youtube,,https://www.youtube.com/watch?v=fQhC0EfLFBo&ab_channel=Svatov%C3%A1clavsk%C3%BDhudebn%C3%ADfestivalOstrava,018,1,0
+CD019,Apollon Quartet,CZ,2001 (release),Youtube,,https://www.youtube.com/watch?v=psovSgMK0qg&ab_channel=ApollonQuartet-Topic,019,1,0
+CD021,Skampa Quartet,CZ,1995 (release),Youtube,,https://www.youtube.com/watch?v=qPsJ26cX4eU&list=OLAK5uy_mprWiFryV7yIErO42PNBYk3dRu2fqA-Ng&index=5&ab_channel=SkampaQuartet%E2%80%93t%C3%A9maSkampaQuartet%E2%80%93t%C3%A9ma,021,1,0
+CD022,Talich Quartet,CZ,2014 (release),Youtube,,https://www.youtube.com/watch?v=boMoTDi7irA&list=OLAK5uy_kEbZbZqU9kDvsKSKqUXeAOWphIycby4T8&ab_channel=TalichQuartet-Topic,022,1,0
+CD023,Smetana Quartet,CZ,1950 (release),Youtube,,https://www.youtube.com/watch?v=iRPtZZaUmqE&list=OLAK5uy_ndUyDrpJy9h1JX8fHi4PFv0i3s1ELzfVk&index=5&ab_channel=SmetanaQuartet%E2%80%93t%C3%A9maSmetanaQuartet%E2%80%93t%C3%A9ma,023,1,0
+CD024,Prazak Quartet,CZ,1991 (release),Youtube,,https://www.youtube.com/watch?v=eoruAU7yn3Q&ab_channel=Pra%C5%BE%C3%A1kQuartet-Topic,024,1,0
+CD025,Wihan Quartet,CZ,2019 (release),Youtube,,https://www.youtube.com/watch?v=ZGg1hOlvuoE&ab_channel=WihanQuartet-Topic,025,1,0
+CD026,Czech Quartet,CZ,1929,Youtube,,https://www.youtube.com/watch?v=vQ1VLgAR9Ao&list=OLAK5uy_lkAYFTBt-6tCKWOEld0GT1TJT1d0H7K8c&index=5&ab_channel=CzechQuartet%E2%80%93t%C3%A9maCzechQuartet%E2%80%93t%C3%A9ma,026,1,0
+CD027,Skampa Quartet,CZ,2007 (release),Youtube,,https://www.youtube.com/watch?v=Gf_C6LDuJ5E&list=OLAK5uy_lWufi_-9GlGG-JAlEQlZFHLOViqPJ1KRs&index=5&ab_channel=SkampaQuartet-Topic,027,1,0

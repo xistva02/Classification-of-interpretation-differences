@@ -1,26 +1,26 @@
-Filename,Name,Origin,Year,Database,Source,Filename_No,label_CZ
-CD001,Alban Berg Quartet,Austria,1975,Stepan_FLAC,CD,001,0
-CD002,Ragazze Quartet,Netherlands/UK,2014,Stepan_FLAC,CD,002,0
-CD003,Prague Quartet,CZ,1973,Stepan_FLAC,CD,003,1
-CD004,Chilingirian Quartet,UK,1990,Stepan_FLAC,CD,004,0
-CD005,Panocha Quartet,CZ,1984,Stepan_FLAC,CD,005,1
-CD006,Pavel Haas Quartet,CZ,2010,Stepan_FLAC,CD,006,1
-CD007,Bennewitz Quartet,CZ,2015 (release),Naxos,https://www.naxosmusiclibrary.com/catalogue/item.asp?cid=CD93.340,007,1
-CD008,Signum Quartet,Germany,2015 (release),Naxos,https://www.naxosmusiclibrary.com/catalogue/item.asp?cid=C5257,008,0
-CD009,Stamic Quartet,CZ,2017 (release),Naxos,https://www.naxosmusiclibrary.com/catalogue/item.asp?cid=BC95498,009,1
-CD010,Martinu Quartet,CZ,2012,Naxos,https://www.naxosmusiclibrary.com/catalogue/item.asp?cid=UP0133-2,010,1
-CD011,Emerson Quartet,USA,2010 (release),Naxos,https://www.naxosmusiclibrary.com/catalogue/item.asp?cid=00028947789789,011,0
-CD012,Cypress Quartet,USA,2013,Naxos,https://www.naxosmusiclibrary.com/catalogue/item.asp?cid=AV2275,012,0
-CD013,Wihan Quartet,CZ,2015 (release),Naxos,https://www.naxosmusiclibrary.com/catalogue/item.asp?cid=NI6322,013,1
-CD014,Artemis Quartet,Germany,2006 (release),Naxos,https://www.naxosmusiclibrary.com/catalogue/item.asp?cid=0094635339956,014,0
-CD015,Guarneri Quartet,USA,2009 (release),Naxos,https://www.naxosmusiclibrary.com/catalogue/item.asp?cid=888880928801,015,0
-CD016,"Weithaas, Tetzlaff, Roberts, Rivinius",International,2009 (release),Naxos,https://www.naxosmusiclibrary.com/catalogue/item.asp?cid=CAvi8553164D,016,0
-CD017,Vlach Quartet,CZ,1960,Naxos,https://www.naxosmusiclibrary.com/catalogue/item.asp?cid=SU3783-2,017,1
-CD018,Pacifica Quartet,USA,2000 (release),Naxos,https://www.naxosmusiclibrary.com/catalogue/item.asp?cid=CDR90000-059,018,0
-CD019,Vlach Quartet,CZ,1992,Naxos,https://www.naxosmusiclibrary.com/catalogue/item.asp?cid=71-0072-2,019,1
-CD020,Wister Quartet,USA,1995,Naxos,https://www.naxosmusiclibrary.com/catalogue/item.asp?cid=DTR9501CD,020,0
-CD021,Audubon Quartet,USA,1999 (release),Naxos,https://www.naxosmusiclibrary.com/catalogue/item.asp?cid=CRC2416,021,0
-CD022,Vlach Quartet,CZ,1995 (release),Youtube,https://www.youtube.com/watch?v=yJvGHpAW4Og&list=OLAK5uy_k7AterWP-PDbx5atxCWed6y6Z5tJOWFlM&ab_channel=VlachQuartetPrague-Topic,022,1
-CD023,Lindsay Quartet,Britain,1992 (release),Youtube,https://www.youtube.com/watch?v=D7L4ILNTFiM&list=OLAK5uy_kF-bzjM7Ynhl-TCNmfRobcH9_LIAMOfYA&ab_channel=TheLindsays-Topic,023,0
-CD024,Cecilia Quartet,Canada (/International),2012 (release),Youtube,https://www.youtube.com/watch?v=kUWl0VzJpcE&list=OLAK5uy_mgRp0nTPuV5RJZRNC77V11B-GWx4OE_wg&ab_channel=CeciliaStringQuartet%E2%80%93t%C3%A9maCeciliaStringQuartet%E2%80%93t%C3%A9ma,024,0
-CD025,Vogler Quartet,Germany,2015 (release),Youtube,https://www.youtube.com/watch?v=YGNO556NyO8&list=OLAK5uy_kvxzjWdAb4aYbLJXsR_33MI2J8qKei9n0&index=8&ab_channel=VoglerQuartett%E2%80%93t%C3%A9maVoglerQuartett%E2%80%93t%C3%A9ma,025,0
+Filename,Name,Origin,Year,Database,Source,Filename_No,label_CZ,label_random
+CD001,Alban Berg Quartet,Austria,1975,Stepan_FLAC,CD,001,0,1
+CD002,Ragazze Quartet,Netherlands/UK,2014,Stepan_FLAC,CD,002,0,1
+CD003,Prague Quartet,CZ,1973,Stepan_FLAC,CD,003,1,1
+CD004,Chilingirian Quartet,UK,1990,Stepan_FLAC,CD,004,0,1
+CD005,Panocha Quartet,CZ,1984,Stepan_FLAC,CD,005,1,1
+CD006,Pavel Haas Quartet,CZ,2010,Stepan_FLAC,CD,006,1,1
+CD007,Bennewitz Quartet,CZ,2015 (release),Naxos,https://www.naxosmusiclibrary.com/catalogue/item.asp?cid=CD93.340,007,1,1
+CD008,Signum Quartet,Germany,2015 (release),Naxos,https://www.naxosmusiclibrary.com/catalogue/item.asp?cid=C5257,008,0,1
+CD009,Stamic Quartet,CZ,2017 (release),Naxos,https://www.naxosmusiclibrary.com/catalogue/item.asp?cid=BC95498,009,1,1
+CD010,Martinu Quartet,CZ,2012,Naxos,https://www.naxosmusiclibrary.com/catalogue/item.asp?cid=UP0133-2,010,1,1
+CD011,Emerson Quartet,USA,2010 (release),Naxos,https://www.naxosmusiclibrary.com/catalogue/item.asp?cid=00028947789789,011,0,1
+CD012,Cypress Quartet,USA,2013,Naxos,https://www.naxosmusiclibrary.com/catalogue/item.asp?cid=AV2275,012,0,1
+CD013,Wihan Quartet,CZ,2015 (release),Naxos,https://www.naxosmusiclibrary.com/catalogue/item.asp?cid=NI6322,013,1,1
+CD014,Artemis Quartet,Germany,2006 (release),Naxos,https://www.naxosmusiclibrary.com/catalogue/item.asp?cid=0094635339956,014,0,0
+CD015,Guarneri Quartet,USA,2009 (release),Naxos,https://www.naxosmusiclibrary.com/catalogue/item.asp?cid=888880928801,015,0,0
+CD016,"Weithaas, Tetzlaff, Roberts, Rivinius",International,2009 (release),Naxos,https://www.naxosmusiclibrary.com/catalogue/item.asp?cid=CAvi8553164D,016,0,0
+CD017,Vlach Quartet,CZ,1960,Naxos,https://www.naxosmusiclibrary.com/catalogue/item.asp?cid=SU3783-2,017,1,0
+CD018,Pacifica Quartet,USA,2000 (release),Naxos,https://www.naxosmusiclibrary.com/catalogue/item.asp?cid=CDR90000-059,018,0,0
+CD019,Vlach Quartet,CZ,1992,Naxos,https://www.naxosmusiclibrary.com/catalogue/item.asp?cid=71-0072-2,019,1,0
+CD020,Wister Quartet,USA,1995,Naxos,https://www.naxosmusiclibrary.com/catalogue/item.asp?cid=DTR9501CD,020,0,0
+CD021,Audubon Quartet,USA,1999 (release),Naxos,https://www.naxosmusiclibrary.com/catalogue/item.asp?cid=CRC2416,021,0,0
+CD022,Vlach Quartet,CZ,1995 (release),Youtube,https://www.youtube.com/watch?v=yJvGHpAW4Og&list=OLAK5uy_k7AterWP-PDbx5atxCWed6y6Z5tJOWFlM&ab_channel=VlachQuartetPrague-Topic,022,1,0
+CD023,Lindsay Quartet,Britain,1992 (release),Youtube,https://www.youtube.com/watch?v=D7L4ILNTFiM&list=OLAK5uy_kF-bzjM7Ynhl-TCNmfRobcH9_LIAMOfYA&ab_channel=TheLindsays-Topic,023,0,0
+CD024,Cecilia Quartet,Canada (/International),2012 (release),Youtube,https://www.youtube.com/watch?v=kUWl0VzJpcE&list=OLAK5uy_mgRp0nTPuV5RJZRNC77V11B-GWx4OE_wg&ab_channel=CeciliaStringQuartet%E2%80%93t%C3%A9maCeciliaStringQuartet%E2%80%93t%C3%A9ma,024,0,0
+CD025,Vogler Quartet,Germany,2015 (release),Youtube,https://www.youtube.com/watch?v=YGNO556NyO8&list=OLAK5uy_kvxzjWdAb4aYbLJXsR_33MI2J8qKei9n0&index=8&ab_channel=VoglerQuartett%E2%80%93t%C3%A9maVoglerQuartett%E2%80%93t%C3%A9ma,025,0,0

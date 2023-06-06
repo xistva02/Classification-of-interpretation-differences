@@ -3,10 +3,13 @@ import time
 import os.path
 import os
 import numpy as np
-from utils import return_diff_structures, create_output_file
+from .utils import return_diff_structures, create_output_file
 
 
-def check_structure(warping_paths: np.ndarray,
+def check_structure(user: str,
+                    session: str,
+                    movement: str,
+                    warping_paths: np.ndarray,
                     output_path: str,
                     plot_path: str,
                     segment_divider: int = 25,
@@ -17,8 +20,38 @@ def check_structure(warping_paths: np.ndarray,
                     excel: bool = True,
                     csv: bool = True,
                     debug: bool = True,
-                    plotting: bool = False
-                    ):
+                    plotting: bool = False,
+                    rewrite: bool = False):
+    """
+    Check the structure of audio recordings based on the slope of warping paths.
+
+    Args:
+        user:
+        session:
+        movement:
+        warping_paths:
+        output_path:
+        plot_path:
+        segment_divider:
+        diff_max:
+        diff_min:
+        area_diff:
+        output:
+        excel:
+        csv:
+        debug:
+        plotting:
+        rewrite:
+    """
+
+    output_diff_filename = f'{user}_{session}_mov{movement}_diff_structure'
+    output_same_filename = f'{user}_{session}_mov{movement}_same_structure'
+
+    if not rewrite:
+        if os.path.exists(f'{output_path}/xlsx/{output_same_filename}.xlsx'):
+            return None
+
+
     # starts the time counter
     if debug:
         tcalcstart = time.time()
@@ -34,8 +67,7 @@ def check_structure(warping_paths: np.ndarray,
                                                                       plotting=plotting,
                                                                       debug=debug)
 
-    output_diff_filename = f'{user}_{session}_mov{movement}_diff_structure'
-    output_same_filename = f'{user}_{session}_mov{movement}_same_structure'
+
 
     if not os.path.isdir(output_path):
         os.mkdir(output_path)
@@ -64,7 +96,7 @@ def check_structure(warping_paths: np.ndarray,
 
 if __name__ == '__main__':
 
-    from config import *
+    from ..src.config import *
 
     chroma_style = 'chroma'  # chroma or beat
 
@@ -79,13 +111,18 @@ if __name__ == '__main__':
 
                 warping_paths = glob(f'../data/{user}/{session}/mov{movement}/warping_paths/{chroma_style}/*')
 
-                check_structure(warping_paths=warping_paths,
+                check_structure(user=user,
+                                session=session,
+                                movement=movement,
+                                warping_paths=warping_paths,
                                 plot_path=plot_path,
                                 output_path=f'outputs',
                                 plotting=True,
                                 debug=False,
                                 excel=True,
                                 csv=True,
-                                output=True)
+                                output=True,
+                                rewrite=True)
                 print('---segment done---')
-    print('---DONE---')
+
+    print('---done---')

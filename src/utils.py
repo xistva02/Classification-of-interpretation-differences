@@ -8,8 +8,30 @@ from madmom.audio.stft import ShortTimeFourierTransformProcessor
 from madmom.audio.spectrogram import FilteredSpectrogramProcessor, LogarithmicSpectrogramProcessor
 
 
-def ffmpeg_load_audio(filepath, sr, mono=True, normalize=True, in_type=np.int16, out_type=np.float32,
+def ffmpeg_load_audio(filepath: str,
+                      sr: int,
+                      mono: bool = True,
+                      normalize: bool = True,
+                      in_type=np.int16,
+                      out_type=np.float32,
                       devnull=open(os.devnull, 'w')):
+    """
+    Ffmpeg function for the non .wav audio files.
+
+    Args:
+        filepath:
+        sr:
+        mono:
+        normalize:
+        in_type:
+        out_type:
+        devnull:
+
+    Returns:
+        audio (np.ndarray):
+        sr (int):
+    """
+
     channels = 1 if mono else 2
     format_strings = {
         np.float64: 'f64le',
@@ -54,7 +76,23 @@ def ffmpeg_load_audio(filepath, sr, mono=True, normalize=True, in_type=np.int16,
     return audio, sr
 
 
-def resample_signal(x_in, sr_in=100, sr_out=50, norm=True):
+def resample_signal(x_in: np.ndarray,
+                    sr_in: int = 100,
+                    sr_out: int = 50,
+                    norm: bool = True):
+    """
+    Resample given signal with input sampling rate (sr_in) to output sampling rate (sr_out).
+
+    Args:
+        x_in:
+        sr_in:
+        sr_out:
+        norm:
+
+    Returns:
+        x_out: output resampled signal
+    """
+
     t_coef_in = np.arange(x_in.shape[0]) / sr_in
     time_in_max_sec = t_coef_in[-1]
     time_max_sec = time_in_max_sec
@@ -72,6 +110,11 @@ def resample_signal(x_in, sr_in=100, sr_out=50, norm=True):
 
 
 class PreProcessor(SequentialProcessor):
+    """
+    Preprocessor the audio recording to specific time-frequency represenation for the beat trracking model.
+    Originally from madmom package.
+    """
+
     def __init__(self, frame_size=1024, num_bands=12, log=np.log, add=1e-6, fps=50, sr=22050):
         # resample to a fixed sample rate in order to get always the same number of filter bins
         sig = SignalProcessor(num_channels=1, sample_rate=sr)

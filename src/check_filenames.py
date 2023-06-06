@@ -1,8 +1,8 @@
 from glob import glob
 import pandas as pd
 from pathlib import Path
-from config import *
 from collections import Counter
+from os.path import basename
 
 
 def check_all_filenames(path_to_metadata, path_to_audio, session):
@@ -18,6 +18,11 @@ def check_all_filenames(path_to_metadata, path_to_audio, session):
 
 
 if __name__ == '__main__':
+
+    from .config import *
+
+    print(f'...processing file: {basename(__file__)}...')
+
     for user in users:
         for session in sessions:
             audio_filenames, df_metadata = check_all_filenames(f'../metadata/_dataset_strings_{user}.csv',
@@ -33,3 +38,5 @@ if __name__ == '__main__':
                     result = list((Counter(df_metadata) - Counter(audio_filenames)).elements())
                     wh = 'Metadata filenames'
                 print(f'Result: {result} on top of {wh}')
+
+    print('---done---')
