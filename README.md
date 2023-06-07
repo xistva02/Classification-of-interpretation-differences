@@ -8,7 +8,7 @@ Paper: https://www.mdpi.com/2076-3417/13/6/3603
 
 ## Description:
 
-Some of the functions are hand-crafted for specific data and their labels. To use them within your dataset, follow the same hierarchy. The recordings are divided into 'user' (composer), 'session' (composition), 'movement'. 
+Some of the functions are hand-crafted for specific data and their labels. To use them within your dataset, follow the same hierarchy. The recordings are divided into 'user' (composer), 'session' (composition), 'movement'. This unusual segmentation is due to the compatibility with a specific software, which is in the development right now.
 In our case, audio files were stored in 'F:/\_KInG/\_king_database/user/composition/CDXXX/XXX\_NameOfQuartet\_movement' path. 
 
 For example, if we use 'user' = Dvorak, 'session' = No.12, 'movement' = 1, we get:
