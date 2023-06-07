@@ -12,7 +12,7 @@ Some of the functions are hand-crafted for specific data and their labels. To us
 In our case, audio files were stored in 'F:/\_KInG/\_king_database/<user>/<composition>/<CDXXX>/XXX\_<name_of\_quartet>\_<movement>' path. 
 
 For example, if we use <user> = Dvorak, <session> = No.12, <movement> = 1, we get:
-F:/\_KInG/\_king\_database/Dvorak/No.12/<CDXXX>/XXX\_<name\_of\_quartet>\_1.wav for each quartet (up to 78 in this case); 
+F:/\_KInG/\_king\_database/Dvorak/No.12/CDXXX/XXX\_name\_of\_quartet\_1.wav for each quartet (up to 78 in this case); 
 such as ['F:/\_KInG/\_king\_database/Dvorak/No.12/CD001/001\_Brodsky\_1.wav', 'F:/\_KInG/\_king\_database/Dvorak/No.12/CD002/002\_Duke\_1.wav', ...]
 
 We analyzed all 4 movements (sonata form) of given string quartets for each composer:
