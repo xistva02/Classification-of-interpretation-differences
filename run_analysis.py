@@ -16,7 +16,7 @@ if __name__ == '__main__':
         Parser with flags.
         """
         parser = ArgumentParser()
-        parser.add_argument('-d', '--debug', type=bool, required=False, default=True,
+        parser.add_argument('-d', '--debug', type=bool, required=False, default=False,
                             help='Debug mode')
         return parser.parse_args()
 
@@ -76,6 +76,10 @@ if __name__ == '__main__':
                                 rewrite=False)
                 print(f'\n')
 
+    ################################################
+    # keep in mind that for 'movements' scenario, only movement 4 will produce results (as others are used
+    # for the datamatrix computation), else fscore and std == 0
+
     if debug:
         logger = get_logger()
     for label in labels:
@@ -88,6 +92,9 @@ if __name__ == '__main__':
                 for session in sessions[no_of_comp]:
                     for movement in movements:
 
+                        # here we exclude some compositions or movements if we do not have enough data
+                        # we do not use try/except clause here to provide more info about which scenarios or
+                        # settings we exclude
                         if user == 'Dvorak' and session == 'No.14' and scenario == 'movements':
                             continue
                         if user == 'Smetana' and session == 'No.2' and scenario == 'movements':
@@ -101,12 +108,12 @@ if __name__ == '__main__':
                         if user == 'Smetana' and session == 'No.2' and movement == '4' and scenario == 'measures':
                             continue
 
-                        if debug:
-                            fscore, std = run_classification(user=user,
-                                                             session=session,
-                                                             movement=movement,
-                                                             scenario=scenario,
-                                                             label=label, stats=True, save=True, debug=debug)
+
+                        fscore, std = run_classification(user=user,
+                                                         session=session,
+                                                         movement=movement,
+                                                         scenario=scenario,
+                                                         label=label, stats=True, save=True, debug=debug)
                         print(f'Fscore: {fscore}, std: {std}')
 
                         metrics[f'{label}'][f'{scenario}']['fscore'][f'{user}_{session}_mov{movement}'] = round(fscore, 3)

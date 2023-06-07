@@ -4,13 +4,68 @@
 This repo is a supplemenary information for the "Classification of Interpretation Differences in String Quartets Based on the Origin of Performers" paper.
 It contains all information (except audio recordings) to reproduce experiments and the results. 
 
-Article: https://www.mdpi.com/2076-3417/13/6/3603
+Paper: https://www.mdpi.com/2076-3417/13/6/3603
 
 ## Description:
 
-Some of the functions are hand-crafted for specific data and their labels. The recordings are divided into categories: 'user' (composer), 'session' (composition), 'movement'. 
-Another important parameters are 'labels' ('label_CZ' denoting Czech or non-Czech origin and 'label_random' with random distribution) and 'scenarios' ('movements', 'motifs', and 'measures'). For better description and more details, see the paper.
+Some of the functions are hand-crafted for specific data and their labels. To use them within your dataset, follow the same hiearchy. The recordings are divided into categories: 'user' (composer), 'session' (composition), 'movement'. 
+In our case, audio files were stored in 'F:/_KInG/_king_database/<user>/<composition>/<CDXXX>/XXX_<name_of_quartet>_<movement>' path. 
 
-Paper: https://www.mdpi.com/2076-3417/13/6/3603
+For example, if we use <user> = Dvorak, <session> = No.12, <movement> = 1, we get:
+F:/\_KInG/\_king\_database/Dvorak/No.12/<CDXXX>/XXX\_<name\_of\_quartet>\_1.wav for each quartets (up to 78 in this case); 
+such as ['F:/\_KInG/\_king\_database/Dvorak/No.12/CD001/001\_Brodsky\_1.wav', 'F:/\_KInG/\_king\_database/Dvorak/No.12/CD002/002\_Duke\_1.wav', ...]
+
+We analyzed all 4 movements (sonata form) of given string quartets for each composer:
+
+Composers:
+
+* Dvorak (No.12, No.13, No.14)
+* Janacek (No.1, No.2)
+* Smetana (No.1, No.2)
+
+Another important parameters are 'labels' ('label\_CZ' denoting Czech or non-Czech origin and 'label\_random' with random distribution) for binary classification 
+and 'scenarios' ('movements', 'motifs', and 'measures') for different resolution of analysis. Keep in mind that for 'movements' scenario, only movement 4 will produce
+classification results, as others are used for datamatrix computation.
+
+For better description and more details, see the [paper](https://www.mdpi.com/2076-3417/13/6/3603).
+
+
+## Install
+
+To install the dependencies, use:
+
+```
+python install -r requirements.txt
+
+```
+To load non .wav audio files, install ffmpeg to your OS and add it to the SYS path. To output results to the .xlsx files using pandas, install openpyxl:
+
+```
+python install openpyxl
+```
+
+
+## Usage:
+
+To run the analysis:
+
+```
+python run_analysis.py
+```
+
+
+To run the whole analysis with debug mode, use:
+
+```
+python run_analysis.py -d True
+```
+
+## Note:
+
+The code is not optimized or clean. It is a result of experimentation. The feedback and comments are appreciated! If you have any questions, feel free to open an issue or send a message to matej.istvanek@vut.cz.
+
+## Acknowledgment:
+
+This work was supported by the "Identification of the Czech origin of digital music recordings using machine learning" grant, which is realized within the project Quality Internal Grants of BUT (KInG BUT), Reg. No. CZ.02.2.69/0.0/0.0/19\_073/0016948 and financed from the OP RDE.
 
 

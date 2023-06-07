@@ -468,17 +468,19 @@ def run_classification(user: str,
         standard deviation of the fscore : float
     """
 
-    print(f'Classification of recordings; scenario: {scenario}, user: {user}, '
-          f'session: {session}, mov: {movement}, label: {label}')
+    if debug:
+        print(f'Classification of recordings; scenario: {scenario}, user: {user}, '
+              f'session: {session}, mov: {movement}, label: {label}')
     cl = Classification(user=user, session=session, movement=movement, scenario=scenario, label=label)
-    ďf_filenames_process = cl.preprocess_datamatrix()
+    df_filenames_process = cl.preprocess_datamatrix()
 
     if scenario == 'movements':
-        print(f'Processing mov{movement} and waiting for all data.')
+        if debug:
+            print(f'Processing mov{movement} and waiting for all data.')
 
         if movement == '4':
             cl.load_and_add()
-            df_nonscaled, df_scaled, df_labels = cl.load_df(filenames=ďf_filenames_process)
+            df_nonscaled, df_scaled, df_labels = cl.load_df(filenames=df_filenames_process)
             features = cl.compute_mrmr(df_data=df_scaled, df_labels=df_labels, n_mrmr=False, save=save)
             cl.pca_with_mrmr(df_scaled=df_scaled, df_nonscaled=df_nonscaled, df_labels=df_labels,
                              selected_features=features,
@@ -487,7 +489,7 @@ def run_classification(user: str,
             return 0, 0
 
     else:
-        df_nonscaled, df_scaled, df_labels = cl.load_df(filenames=ďf_filenames_process)
+        df_nonscaled, df_scaled, df_labels = cl.load_df(filenames=df_filenames_process)
         features = cl.compute_mrmr(df_data=df_scaled, df_labels=df_labels, n_mrmr=True, save=save)
         cl.pca_with_mrmr(df_scaled=df_scaled, df_nonscaled=df_nonscaled, df_labels=df_labels,
                          selected_features=features,
@@ -503,7 +505,8 @@ def run_classification(user: str,
                 f'Cannot process the parameters; user: {user}, session: {session}, mov: {movement}, label: {label}')
             logger.exception(e, exc_info=True)
         else:
-            print(f'Cannot use SVM on provided data; user: {user}, session: {session}, mov: {movement}, label: {label}')
+            if debug:
+                print(f'Cannot use SVM on provided data; user: {user}, session: {session}, mov: {movement}, label: {label}')
 
     return fscore, std
 
@@ -561,13 +564,13 @@ if __name__ == '__main__':
                         if user == 'Smetana' and session == 'No.2' and movement == '4' and scenario == 'measures':
                             continue
 
-                        if debug:
-                            fscore, std = run_classification(user=user,
-                                                             session=session,
-                                                             movement=movement,
-                                                             scenario=scenario,
-                                                             label=label,
-                                                             stats=True, save=True, debug=debug, logger=logger)
+
+                        fscore, std = run_classification(user=user,
+                                                         session=session,
+                                                         movement=movement,
+                                                         scenario=scenario,
+                                                         label=label,
+                                                         stats=True, save=True, debug=debug, logger=logger)
                         print(f'Fscore: {fscore}, std: {std}')
 
                         metrics[f'{label}'][f'{scenario}']['fscore'][f'{user}_{session}_mov{movement}'] = fscore

@@ -1,7 +1,6 @@
 import pandas as pd
 from matplotlib import pyplot as plt
 import os.path
-import tikzplotlib
 import numpy as np
 import os
 
