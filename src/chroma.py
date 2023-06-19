@@ -20,7 +20,7 @@ class ChromaVectors:
 
         Args:
             user (str)            -- name of the user/composer
-            session (str)         -- name of the user/composer
+            session (str)         -- name of the session/composition
             movement (str)        -- movement number
         """
 
